@@ -17,9 +17,9 @@ function addCallHistory(serviceName, number) {
     "flex justify-between items-center bg-[#fafafa] p-4 rounded-xl mt-5";
 
   historyItem.innerHTML = `
-    <div>
-      <p class="text-[18px] font-semibold">${serviceName}</p>
-      <p class="text-[18px]">${number}</p>
+    <div class="px-3">
+      <p class="text-[18px] font-bold">${serviceName}</p>
+      <p class="text-[18px] font-semibold">${number}</p>
     </div>
     <div class="font-semibold text-[20px]">${timeNow}</div>
   `;
@@ -68,8 +68,6 @@ for (const icon of loveIcons) {
   icon.addEventListener("click", function () {
     let currentHeart = parseInt(heartCountEl.innerText);
     heartCountEl.innerText = currentHeart + 1;
-
-    icon.classList.toggle("text-red-500");
   });
 }
 
